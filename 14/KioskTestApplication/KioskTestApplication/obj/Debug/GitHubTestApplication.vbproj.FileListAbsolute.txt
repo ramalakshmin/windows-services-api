@@ -1,0 +1,13 @@
+C:\Users\ssaravanan\Desktop\issue\October\14\KioskTestApplication\KioskTestApplication\bin\Debug\KioskTestApplication.exe.config
+C:\Users\ssaravanan\Desktop\issue\October\14\KioskTestApplication\KioskTestApplication\obj\Debug\KioskTestApplication.exe
+C:\Users\ssaravanan\Desktop\issue\October\14\KioskTestApplication\KioskTestApplication\obj\Debug\KioskTestApplication.xml
+C:\Users\ssaravanan\Desktop\issue\October\14\KioskTestApplication\KioskTestApplication\obj\Debug\KioskTestApplication.pdb
+C:\Users\ssaravanan\Desktop\issue\October\14\KioskTestApplication\KioskTestApplication\bin\Debug\KioskTestApplication.exe
+C:\Users\ssaravanan\Desktop\issue\October\14\KioskTestApplication\KioskTestApplication\bin\Debug\KioskTestApplication.pdb
+C:\Users\ssaravanan\Desktop\issue\October\14\KioskTestApplication\KioskTestApplication\bin\Debug\KioskTestApplication.xml
+C:\Users\ssaravanan\Desktop\issue\October\14\KioskTestApplication\KioskTestApplication\bin\Debug\Octokit.dll
+C:\Users\ssaravanan\Desktop\issue\October\14\KioskTestApplication\KioskTestApplication\bin\Debug\Octokit.pdb
+C:\Users\ssaravanan\Desktop\issue\October\14\KioskTestApplication\KioskTestApplication\obj\Debug\GitHubTestApplication.vbprojResolveAssemblyReference.cache
+C:\Users\ssaravanan\Desktop\issue\October\14\KioskTestApplication\KioskTestApplication\obj\Debug\KioskTestApplication.Form1.resources
+C:\Users\ssaravanan\Desktop\issue\October\14\KioskTestApplication\KioskTestApplication\obj\Debug\KioskTestApplication.Resources.resources
+C:\Users\ssaravanan\Desktop\issue\October\14\KioskTestApplication\KioskTestApplication\obj\Debug\GitHubTestApplication.vbproj.GenerateResource.Cache
