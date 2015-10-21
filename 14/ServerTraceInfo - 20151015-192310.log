@@ -1,0 +1,1892 @@
+
+2015-10-15 07:24:51	 	CON\0000000186 >> ORACLE : Connect
+2015-10-15 07:24:51	 	CON\0000000186 >> ORACLE Text: SELECT EXS_ID, SRC_S_ID, DST_S_ID, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, APP_ID FROM AS_CUB_NACH_T.EX_SYSTEM WHERE DST_S_ID=70303AND SRC_S_ID=70260AND APP_ID=2
+2015-10-15 07:24:51	 	CON\0000000186 Returned: 1 row(s)
+2015-10-15 07:24:51	 	CON\0000000186 Total execution Time: 00:00:00
+2015-10-15 07:24:51	 	
+2015-10-15 07:24:51	 	CON\0000000186 >> ORACLE : Disconnect
+2015-10-15 07:24:51	 	
+2015-10-15 07:24:51	 	
+2015-10-15 07:24:51	 	CON\0000000187 >> ORACLE : Connect
+2015-10-15 07:24:51	 	CON\0000000187 >> ORACLE : BEGIN TRANSACTION
+2015-10-15 07:24:51	 	CON\0000000187 Total execution Time: 00:00:00
+2015-10-15 07:24:51	 	CON\0000000187 >> ORACLE (InTran)Text: SELECT EXFFG_ID, EXFFG_NAME, DATA_HANDLER_CODE, PROCESS_HANDLER_CODE, FORMATTER_HANDLER_CODE, DIRECTION, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, COMPRESSION_HANDLER_CODE, FILEUPDATE_HANDLER_CODE FROM AC_CUB_NACH_T.EX_FILE_FORMAT_GROUPS WHERE EXFFG_ID=526
+2015-10-15 07:24:51	 	CON\0000000187 Returned: 1 row(s)
+2015-10-15 07:24:51	 	CON\0000000187 Total execution Time: 00:00:00
+2015-10-15 07:24:51	 	
+2015-10-15 07:24:51	 	CON\0000000187 >> ORACLE (InTran)Text: SELECT AS_ID, AS_NAME, AS_VALUE, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, APP_ID FROM AC_CUB_NACH_T.APPLICATION_SETUP WHERE AS_NAME ='STORAGEPATH' and APP_ID=2
+2015-10-15 07:24:51	 	CON\0000000187 Returned: 1 row(s)
+2015-10-15 07:24:51	 	CON\0000000187 Total execution Time: 00:00:00
+2015-10-15 07:24:51	 	
+2015-10-15 07:24:51	 	CON\0000000187 >> ORACLE (InTran)Text: SELECT EXG_ID, GATEWAY_NAME, GATEWAY_CONFIG, GATEWAY_TYPE, READ_PATH, WRITE_PATH, IS_ELECTRONIC, HANDLER_CODE, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE FROM AC_CUB_NACH_T.EX_GATEWAYS WHERE EXG_ID=604
+2015-10-15 07:24:51	 	CON\0000000187 Returned: 1 row(s)
+2015-10-15 07:24:51	 	CON\0000000187 Total execution Time: 00:00:00
+2015-10-15 07:24:51	 	
+2015-10-15 07:24:52	 	CON\0000000187 >> ORACLE (InTran)Text: SELECT EXFF_ID, EXFFG_ID, FILE_NAME_PATTERN, EXTENSION, HANDLER_CODE, SORT_ORDER, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, MATCHING_PATTERN, DESCRIPTION FROM AC_CUB_NACH_T.EX_FILE_FORMATS WHERE EXFFG_ID=526
+2015-10-15 07:24:52	 	CON\0000000187 Returned: 1 row(s)
+2015-10-15 07:24:52	 	CON\0000000187 Total execution Time: 00:00:00
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	CON\0000000187 >> ORACLE (InTran)Text: SELECT EXS_ID, SRC_S_ID, DST_S_ID, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, APP_ID FROM AS_CUB_NACH_T.EX_SYSTEM WHERE EXS_ID =241
+2015-10-15 07:24:52	 	CON\0000000187 Returned: 1 row(s)
+2015-10-15 07:24:52	 	CON\0000000187 Total execution Time: 00:00:00.0156323
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	CON\0000000187 >> ORACLE (InTran)Text: INSERT INTO AD_CUB_NACH_T.EX_HEADER(EXS_ID, EXFFG_ID, FILE_PATH, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE) VALUES (:EXS_ID, :EXFFG_ID, :FILE_PATH, :CREATED_BY, :CREATED_DATE, :MODIFIED_BY, :MODIFIED_DATE, :VERSION_NO, :START_ACTIVE_DATE, :END_ACTIVE_DATE) RETURNING EXH_ID INTO :SEQPARAM 
+2015-10-15 07:24:52	 	CON\0000000187 :EXS_ID                         Decimal          = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :EXFFG_ID                       Decimal          = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :FILE_PATH                      Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :CREATED_BY                     Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :CREATED_DATE                   Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :MODIFIED_BY                    Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :MODIFIED_DATE                  Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :VERSION_NO                     Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :START_ACTIVE_DATE              Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :END_ACTIVE_DATE                Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000187 SEQPARAM                        Decimal          = NULL
+2015-10-15 07:24:52	 	CON\0000000187 Rows Affected: 1
+2015-10-15 07:24:52	 	CON\0000000187 Total execution Time: 00:00:00
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	CON\0000000187 >> ORACLE (InTran)Text: INSERT INTO AD_CUB_NACH_T.EX_FILES(FILE_NAME, FILE_STATUS, EXFF_ID, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, REFERENCE_NO, COMPRESSION_FILE) VALUES (:FILE_NAME, :FILE_STATUS, :EXFF_ID, :CREATED_BY, :CREATED_DATE, :MODIFIED_BY, :MODIFIED_DATE, :VERSION_NO, :START_ACTIVE_DATE, :END_ACTIVE_DATE, :REFERENCE_NO, :COMPRESSION_FILE) RETURNING EXF_ID INTO :SEQPARAM 
+2015-10-15 07:24:52	 	CON\0000000187 :FILE_NAME                      Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :FILE_STATUS                    Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :EXFF_ID                        Decimal          = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :CREATED_BY                     Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :CREATED_DATE                   Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :MODIFIED_BY                    Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :MODIFIED_DATE                  Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :VERSION_NO                     Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :START_ACTIVE_DATE              Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :END_ACTIVE_DATE                Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :REFERENCE_NO                   Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :COMPRESSION_FILE               Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000187 SEQPARAM                        Decimal          = NULL
+2015-10-15 07:24:52	 	CON\0000000187 Rows Affected: 1
+2015-10-15 07:24:52	 	CON\0000000187 Total execution Time: 00:00:00.0156323
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	CON\0000000187 >> ORACLE (InTran)Text: INSERT INTO AD_CUB_NACH_T.EX_HEADER_FILES(EXF_ID, EXH_ID, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE) VALUES (:EXF_ID, :EXH_ID, :CREATED_BY, :CREATED_DATE, :MODIFIED_BY, :MODIFIED_DATE, :VERSION_NO, :START_ACTIVE_DATE, :END_ACTIVE_DATE) RETURNING EXHF_ID INTO :SEQPARAM 
+2015-10-15 07:24:52	 	CON\0000000187 :EXF_ID                         Decimal          = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :EXH_ID                         Decimal          = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :CREATED_BY                     Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :CREATED_DATE                   Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :MODIFIED_BY                    Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :MODIFIED_DATE                  Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :VERSION_NO                     Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :START_ACTIVE_DATE              Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000187 :END_ACTIVE_DATE                Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000187 SEQPARAM                        Decimal          = NULL
+2015-10-15 07:24:52	 	CON\0000000187 Rows Affected: 1
+2015-10-15 07:24:52	 	CON\0000000187 Total execution Time: 00:00:00.0156323
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	CON\0000000187 >> ORACLE : COMMIT TRANSACTION
+2015-10-15 07:24:52	 	CON\0000000187 Total execution Time: 00:00:00
+2015-10-15 07:24:52	 	CON\0000000187 >> ORACLE : Disconnect
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	CON\0000000188 >> ORACLE : Connect
+2015-10-15 07:24:52	 	CON\0000000188 >> ORACLE : BEGIN TRANSACTION
+2015-10-15 07:24:52	 	CON\0000000188 Total execution Time: 00:00:00
+2015-10-15 07:24:52	 	CON\0000000188 >> ORACLE (InTran)Text: SELECT EXF_ID, EXHF_ID, FILE_PATH, EXH_ID, EXFFG_ID, FILE_NAME, EXFF_ID, FILE_STATUS, COMPRESSION_FILE FROM AD_CUB_NACH_T.VW_EX_FILEINFO WHERE EXFFG_ID=526 And FILE_STATUS IN ('DOWNLOADED') AND EXHF_ID IN (32109)
+2015-10-15 07:24:52	 	CON\0000000188 Returned: 1 row(s)
+2015-10-15 07:24:52	 	CON\0000000188 Total execution Time: 00:00:00
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	CON\0000000188 >> ORACLE (InTran)Text: SELECT EXFFG_ID, EXFFG_NAME, DATA_HANDLER_CODE, PROCESS_HANDLER_CODE, FORMATTER_HANDLER_CODE, DIRECTION, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, COMPRESSION_HANDLER_CODE, FILEUPDATE_HANDLER_CODE FROM AC_CUB_NACH_T.EX_FILE_FORMAT_GROUPS WHERE EXFFG_ID=526
+2015-10-15 07:24:52	 	CON\0000000188 Returned: 1 row(s)
+2015-10-15 07:24:52	 	CON\0000000188 Total execution Time: 00:00:00
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	CON\0000000188 >> ORACLE (InTran)Text: SELECT EXS_ID, SRC_S_ID, DST_S_ID, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, APP_ID FROM AS_CUB_NACH_T.EX_SYSTEM WHERE EXS_ID =241
+2015-10-15 07:24:52	 	CON\0000000188 Returned: 1 row(s)
+2015-10-15 07:24:52	 	CON\0000000188 Total execution Time: 00:00:00.0156323
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	CON\0000000188 >> ORACLE (InTran)Text: SELECT EXRF_ID, ELEMENT_NAME, EXFF_ID, RFTYPE, EXFFG_ID, PARENT_EXRF_ID, EXFFD_ID, EXFFD_TYPE, VALUE_FIELD, DISP_FIELD, GROUP_BY, MAXCOUNT, HANDLERCODE, FORMAT, ATTRIBUTES, SEPARATOR, PREFIX_VALUE, AGGREGATE_COLUMN, SUFFIX_VALUE, IGNORE_FIELD, SORT_ORDER, FFD_PARENT_COL, START_FROM, LENGTH, FFD_CHILD_COL, FFD_TABLE_NAME, PARENT_COL, CHILD_COL, TABLE_NAME FROM AC_CUB_NACH_T.VW_EX_FIELDS WHERE EXFFG_ID=526
+2015-10-15 07:24:52	 	CON\0000000188 Returned: 0 row(s)
+2015-10-15 07:24:52	 	CON\0000000188 Total execution Time: 00:00:00
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	CON\0000000188 >> ORACLE (InTran)StoredProcedure: AS_CUB_NACH_T.SP_SCH_GET_SCHEMA_NAME
+2015-10-15 07:24:52	 	CON\0000000188 pTableName                      Varchar2         = EX_SYSTEM_GATEWAYS
+2015-10-15 07:24:52	 	CON\0000000188 pAppId                          Int32            = 2
+2015-10-15 07:24:52	 	CON\0000000188 pSchemaName                     Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 Rows Affected: -1
+2015-10-15 07:24:52	 	CON\0000000188 Total execution Time: 00:00:00
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	CON\0000000188 
+
+2015-10-15 07:24:52	 	CON\0000000188 >> ORACLE (InTran)Text: SELECT EXSG_ID, EXS_ID, EXG_ID, EXFFG_ID, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, DESCRIPTION, FILE_SECURITY, CONTENT_SECURITY, SENDER_KEY, RECEIVER_KEY, COMPRESSION, NEED_MQ, NEED_MAIL FROM AS_CUB_NACH_T.EX_SYSTEM_GATEWAYS WHERE EXS_ID =241 AND EXG_ID=604
+2015-10-15 07:24:52	 	CON\0000000188 Returned: 1 row(s)
+2015-10-15 07:24:52	 	CON\0000000188 Total execution Time: 00:00:00
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	CON\0000000188 >> ORACLE (InTran)Text: SELECT EXFF_ID, EXFFG_ID, FILE_NAME_PATTERN, EXTENSION, HANDLER_CODE, SORT_ORDER, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, MATCHING_PATTERN, DESCRIPTION FROM AC_CUB_NACH_T.EX_FILE_FORMATS WHERE EXFFG_ID=526
+2015-10-15 07:24:52	 	CON\0000000188 Returned: 1 row(s)
+2015-10-15 07:24:52	 	CON\0000000188 Total execution Time: 00:00:00
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	CON\0000000188 >> ORACLE (InTran)Text: SELECT AS_ID, AS_NAME, AS_VALUE, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, APP_ID FROM AC_CUB_NACH_T.APPLICATION_SETUP WHERE AS_NAME IN ('GDPIC_LIC_KEY','NEED_ATTACHMENT_ENCRYPTION')
+2015-10-15 07:24:52	 	CON\0000000188 Returned: 2 row(s)
+2015-10-15 07:24:52	 	CON\0000000188 Total execution Time: 00:00:00
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	CON\0000000188 >> ORACLE (InTran)Text: SELECT DTTADIF_ID, DTTAD_ID, IMAGE_COLOR, IMAGE_FORMAT, RESOULTION, COMPRESSION, IS_DEFAULT, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO FROM AC_CUB_NACH_T.DTTAD_IMAGE_FORMATS WHERE IS_DEFAULT='Y'
+2015-10-15 07:24:52	 	CON\0000000188 Returned: 1 row(s)
+2015-10-15 07:24:52	 	CON\0000000188 Total execution Time: 00:00:00
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	CON\0000000188 >> ORACLE (InTran)Text: SELECT RS_ID, RS_CODE, RS_DESCRIPTION, TRANSFER_MODE, HOST_NAME, PORT_NO, STORAGE_PATH, STATUS, RS_STORAGE_TYPE, S_ID, RS_DB_INFO FROM AS_CUB_NACH_T.VW_GET_RESOURCE_SERVERS WHERE S_ID ='70260'
+2015-10-15 07:24:52	 	CON\0000000188 Returned: 1 row(s)
+2015-10-15 07:24:52	 	CON\0000000188 Total execution Time: 00:00:00
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	Preparing Import Data Started..
+2015-10-15 07:24:52	 	Preparing Import Data Ended..
+2015-10-15 07:24:52	 	CON\0000000188 >> ORACLE (InTran)Text: INSERT INTO AD_CUB_NACH_T.PRC_TOKENS(TOKEN_TYPE, TOKEN_DESCRIPTION, START_TIME, END_TIME, CREATED_BY, CREATED_DATE, WFTPA_ID, CREATED_BY_STS_ID) VALUES (:TOKEN_TYPE, :TOKEN_DESCRIPTION, :START_TIME, :END_TIME, :CREATED_BY, :CREATED_DATE, :WFTPA_ID, :CREATED_BY_STS_ID)
+2015-10-15 07:24:52	 	CON\0000000188 :TOKEN_TYPE                     Char             = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :TOKEN_DESCRIPTION              Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :START_TIME                     Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :END_TIME                       Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :CREATED_BY                     Int32            = 8793
+2015-10-15 07:24:52	 	CON\0000000188 :CREATED_DATE                   Date             = 10/15/2015 7:24:52 PM
+2015-10-15 07:24:52	 	CON\0000000188 :WFTPA_ID                       Int32            = 72750
+2015-10-15 07:24:52	 	CON\0000000188 :CREATED_BY_STS_ID              Int32            = 1405
+2015-10-15 07:24:52	 	CON\0000000188 Rows Affected: 1
+2015-10-15 07:24:52	 	CON\0000000188 Total execution Time: 00:00:00
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	CON\0000000188 >> ORACLE (InTran)Text: SELECT AD_CUB_NACH_T.GETIDENTITY FROM DUAL
+2015-10-15 07:24:52	 	CON\0000000188 Returned: 354136
+2015-10-15 07:24:52	 	CON\0000000188 Total execution Time: 00:00:00
+2015-10-15 07:24:52	 	
+2015-10-15 07:24:52	 	CON\0000000188 >> ORACLE (InTran)Text: INSERT INTO AD_CUB_NACH_T.TMP_TRN_DBT_CREDITS(TMPTDC_ID, TRNDC_ID, TRNDB_ID, RESERVED1, RESERVED1_STATUS, PRCT_ID, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, SYSTEM_ID, STS_ID, CREATED_BY_STS_ID, MODIFIED_BY_STS_ID, TRAN_CODE, PROCESS_TYPE, PRODUCT_TYPE, ORG_BANK_CODE, DST_BANK_CODE, CORPORATE_ACCT_NO, UMRN, BENEFICIARY_NAME, BENEFICIARY_ACCOUNT_NO, BENEFICIARY_ACCOUNT_TYPE, BENEFICIARY_AADHAAR_NO, COLLECTION_AMOUNT, MAX_AMOUNT, SETTLEMENT_CYCLE, ACH_ITEM_SEQ_NO, SETTLEMENT_DATE, USER_GROUP_REF_NO, INWARD_TRAN_REF_NO, RESPONSE_STATUS, RETURN_REASON_CODE, RESPONSE_RECD_DATE, NPCI_ACK_STATUS, NPCI_ACK_ERROR_CODE, NPCI_ACK_RECD_DATE, DATA_INPUT_SOURCE, TRAN_CATEGORY, CORPORATE_USER_NAME, CORPORATE_LEDGER_FOLIO_NO, CORPORATE_USER_NUMBER, BANK_IDENDIFIER, CUST_MDT_DATE, MAPPING_STATUS, VALIDATION_STATUS, LOCAL_ID, MANDATE_TYPE, FILE_TYPE, BATCHSLNO, RESOURCE_SERVER_CODE, TRN_STATUS, EXHF_ID, CHECKSUM, HDR_TRAN_CODE, HDR_DEST_BANK_CODE, HDR_TOTAL_RECORDS, HDR_TOTAL_AMOUNT, DEST_BANK_ACCOUNT_NO, HDR_ACH_ITEM_SEQ_NO, HDR_CHECKSUM_NO, CBS_RESPONSE_REF_NO, CREDITOR_UTILITY_CODE, TRAN_SOURCE, CBS_INW_TRAN_REF, BENEFICIARY_CBS_ACCOUNT_NO, ECS_ACCOUNT_NO, FAIL_REASON) VALUES (:TMPTDC_ID, :TRNDC_ID, :TRNDB_ID, :RESERVED1, :RESERVED1_STATUS, :PRCT_ID, :CREATED_BY, :CREATED_DATE, :MODIFIED_BY, :MODIFIED_DATE, :VERSION_NO, :SYSTEM_ID, :STS_ID, :CREATED_BY_STS_ID, :MODIFIED_BY_STS_ID, :TRAN_CODE, :PROCESS_TYPE, :PRODUCT_TYPE, :ORG_BANK_CODE, :DST_BANK_CODE, :CORPORATE_ACCT_NO, :UMRN, :BENEFICIARY_NAME, :BENEFICIARY_ACCOUNT_NO, :BENEFICIARY_ACCOUNT_TYPE, :BENEFICIARY_AADHAAR_NO, :COLLECTION_AMOUNT, :MAX_AMOUNT, :SETTLEMENT_CYCLE, :ACH_ITEM_SEQ_NO, :SETTLEMENT_DATE, :USER_GROUP_REF_NO, :INWARD_TRAN_REF_NO, :RESPONSE_STATUS, :RETURN_REASON_CODE, :RESPONSE_RECD_DATE, :NPCI_ACK_STATUS, :NPCI_ACK_ERROR_CODE, :NPCI_ACK_RECD_DATE, :DATA_INPUT_SOURCE, :TRAN_CATEGORY, :CORPORATE_USER_NAME, :CORPORATE_LEDGER_FOLIO_NO, :CORPORATE_USER_NUMBER, :BANK_IDENDIFIER, :CUST_MDT_DATE, :MAPPING_STATUS, :VALIDATION_STATUS, :LOCAL_ID, :MANDATE_TYPE, :FILE_TYPE, :BATCHSLNO, :RESOURCE_SERVER_CODE, :TRN_STATUS, :EXHF_ID, :CHECKSUM, :HDR_TRAN_CODE, :HDR_DEST_BANK_CODE, :HDR_TOTAL_RECORDS, :HDR_TOTAL_AMOUNT, :DEST_BANK_ACCOUNT_NO, :HDR_ACH_ITEM_SEQ_NO, :HDR_CHECKSUM_NO, :CBS_RESPONSE_REF_NO, :CREDITOR_UTILITY_CODE, :TRAN_SOURCE, :CBS_INW_TRAN_REF, :BENEFICIARY_CBS_ACCOUNT_NO, :ECS_ACCOUNT_NO, :FAIL_REASON)
+2015-10-15 07:24:52	 	CON\0000000188 :TMPTDC_ID                      Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :TRNDC_ID                       Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :TRNDB_ID                       Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :RESERVED1                      Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :RESERVED1_STATUS               Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :PRCT_ID                        Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :CREATED_BY                     Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :CREATED_DATE                   Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :MODIFIED_BY                    Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :MODIFIED_DATE                  Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :VERSION_NO                     Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :SYSTEM_ID                      Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :STS_ID                         Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :CREATED_BY_STS_ID              Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :MODIFIED_BY_STS_ID             Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :TRAN_CODE                      Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :PROCESS_TYPE                   Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :PRODUCT_TYPE                   Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :ORG_BANK_CODE                  Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :DST_BANK_CODE                  Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :CORPORATE_ACCT_NO              Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :UMRN                           Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :BENEFICIARY_NAME               Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :BENEFICIARY_ACCOUNT_NO         Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :BENEFICIARY_ACCOUNT_TYPE       Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :BENEFICIARY_AADHAAR_NO         Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :COLLECTION_AMOUNT              Decimal          = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :MAX_AMOUNT                     Decimal          = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :SETTLEMENT_CYCLE               Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :ACH_ITEM_SEQ_NO                Double           = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :SETTLEMENT_DATE                Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :USER_GROUP_REF_NO              Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :INWARD_TRAN_REF_NO             Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :RESPONSE_STATUS                Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :RETURN_REASON_CODE             Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :RESPONSE_RECD_DATE             Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :NPCI_ACK_STATUS                Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :NPCI_ACK_ERROR_CODE            Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :NPCI_ACK_RECD_DATE             Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :DATA_INPUT_SOURCE              Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :TRAN_CATEGORY                  Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :CORPORATE_USER_NAME            Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :CORPORATE_LEDGER_FOLIO_NO      Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :CORPORATE_USER_NUMBER          Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :BANK_IDENDIFIER                Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :CUST_MDT_DATE                  Date             = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :MAPPING_STATUS                 Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :VALIDATION_STATUS              Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :LOCAL_ID                       Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :MANDATE_TYPE                   Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :FILE_TYPE                      Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :BATCHSLNO                      Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :RESOURCE_SERVER_CODE           Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :TRN_STATUS                     Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :EXHF_ID                        Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :CHECKSUM                       Int64            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :HDR_TRAN_CODE                  Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :HDR_DEST_BANK_CODE             Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :HDR_TOTAL_RECORDS              Int32            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :HDR_TOTAL_AMOUNT               Decimal          = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :DEST_BANK_ACCOUNT_NO           Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :HDR_ACH_ITEM_SEQ_NO            Int64            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :HDR_CHECKSUM_NO                Int64            = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :CBS_RESPONSE_REF_NO            Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :CREDITOR_UTILITY_CODE          Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :TRAN_SOURCE                    Char             = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :CBS_INW_TRAN_REF               Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :BENEFICIARY_CBS_ACCOUNT_NO     Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :ECS_ACCOUNT_NO                 Varchar2         = NULL
+2015-10-15 07:24:52	 	CON\0000000188 :FAIL_REASON                    Varchar2         = NULL
+2015-10-15 07:24:53	 	CON\0000000188 Query execution failed : 
+Oracle.DataAccess.Client.OracleException ORA-24381: error(s) in array DML
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column    at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck)
+   at Oracle.DataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Gss.Data.__GSSORADBG.ExecuteBulk(Int32 pConnectionID, DataTable pSource, OracleCommand cmd, Hashtable htParams, Field pAutoField, OracleParameter pAutoFieldParam, Int32 pCommitCount, Boolean pBindByname) in D:\OASIS 5.0\Development\Gss\Gss.Data.Oracle\Gss.Data.Oracle\Gss.Data\__GSSORADBG.vb:line 304
+2015-10-15 07:24:53	 	CON\0000000188 Errors
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-24381: error(s) in array DML
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	CON\0000000188 CON\0000000188 	Error Message=ORA-01438: value larger than specified precision allowed for this column
+
+2015-10-15 07:24:53	 	System.Data.DataException: Query execution failed : Oracle.DataAccess.Client.OracleException ORA-24381: error(s) in array DML
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column    at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck)
+   at Oracle.DataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Gss.Data.__GSSORADBG.ExecuteBulk(Int32 pConnectionID, DataTable pSource, OracleCommand cmd, Hashtable htParams, Field pAutoField, OracleParameter pAutoFieldParam, Int32 pCommitCount, Boolean pBindByname) in D:\OASIS 5.0\Development\Gss\Gss.Data.Oracle\Gss.Data.Oracle\Gss.Data\__GSSORADBG.vb:line 304
+   at Gss.Data.__GSSORADBG.ExecuteBulk(Int32 pConnectionID, DataTable pSource, OracleCommand cmd, Hashtable htParams, Field pAutoField, OracleParameter pAutoFieldParam, Int32 pCommitCount, Boolean pBindByname) in D:\OASIS 5.0\Development\Gss\Gss.Data.Oracle\Gss.Data.Oracle\Gss.Data\__GSSORADBG.vb:line 324
+   at Gss.Data.BaseBusinessLogic.Entity.Insert(DataTable pSource, Int32 pCommitCount) in D:\OASIS 5.0\Development\Gss\Gss.Data.Oracle\Gss.Data.Oracle\Gss.Data.BusinessLogic\Entity.vb:line 165
+   at Gss.Oasis.Gateway.Server.Process.Core.MMSFileUpdate.ImportData(DBConnectivity pconn, Int32 pWFTPA_ID, DataSet pData, Int32 pEXHF_ID, String pDTCODE) in D:\OASIS 5.0\Development\Windows\FX\Gss.Oasis.Gateway\Gss.Oasis.Gateway.Server.Process.Core\Core.Base.Process\MMSFileUpdate.vb:line 188
+2015-10-15 07:24:53	 	System.Data.DataException: Query execution failed : Oracle.DataAccess.Client.OracleException ORA-24381: error(s) in array DML
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column
+
+ORA-01438: value larger than specified precision allowed for this column    at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck)
+   at Oracle.DataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at Gss.Data.__GSSORADBG.ExecuteBulk(Int32 pConnectionID, DataTable pSource, OracleCommand cmd, Hashtable htParams, Field pAutoField, OracleParameter pAutoFieldParam, Int32 pCommitCount, Boolean pBindByname) in D:\OASIS 5.0\Development\Gss\Gss.Data.Oracle\Gss.Data.Oracle\Gss.Data\__GSSORADBG.vb:line 304
+   at Gss.Oasis.Gateway.Server.Process.Core.MMSFileUpdate.ImportData(DBConnectivity pconn, Int32 pWFTPA_ID, DataSet pData, Int32 pEXHF_ID, String pDTCODE) in D:\OASIS 5.0\Development\Windows\FX\Gss.Oasis.Gateway\Gss.Oasis.Gateway.Server.Process.Core\Core.Base.Process\MMSFileUpdate.vb:line 301
+   at Gss.Oasis.Gateway.Server.Process.Core.ImportProcess.Import() in D:\OASIS 5.0\Development\Windows\FX\Gss.Oasis.Gateway\Gss.Oasis.Gateway.Server.Process.Core\Core.Base.Process\ImportProcess.vb:line 72
+   at Gss.Oasis.Gateway.Server.BusinessLogics.ExchangeServiceHelper.Update(Int32 pWFTPA_ID, Int32 pEXFFGID, Int32 pGateWayID, Int32 pEXS_ID, String pExHF_ID, String pDTCODE) in D:\OASIS 5.0\Development\Windows\FX\Gss.Oasis.Gateway\Gss.Oasis.Gateway.Server.BusinessLogics\Gss.Oasis.Gateway.Server.BusinessLogics\ExchangeServiceHelper.vb:line 302
+2015-10-15 07:24:53	 	CON\0000000188 >> ORACLE (InTran)Text: UPDATE AD_CUB_NACH_T.EX_FILES SET FILE_STATUS = :FILE_STATUS, MODIFIED_BY = :MODIFIED_BY, MODIFIED_DATE = :MODIFIED_DATE WHERE EXF_ID = :EXF_ID
+2015-10-15 07:24:53	 	CON\0000000188 :FILE_STATUS                    Varchar2         = NULL
+2015-10-15 07:24:53	 	CON\0000000188 :MODIFIED_BY                    Int32            = 1
+2015-10-15 07:24:53	 	CON\0000000188 :MODIFIED_DATE                  Date             = 10/15/2015 7:24:53 PM
+2015-10-15 07:24:53	 	CON\0000000188 :EXF_ID                         Decimal          = NULL
+2015-10-15 07:24:53	 	CON\0000000188 Rows Affected: 1
+2015-10-15 07:24:53	 	CON\0000000188 Total execution Time: 00:00:00
+2015-10-15 07:24:53	 	
+2015-10-15 07:24:53	 	CON\0000000188 >> ORACLE : COMMIT TRANSACTION
+2015-10-15 07:24:53	 	CON\0000000188 Total execution Time: 00:00:00.0156323
+2015-10-15 07:24:53	 	CON\0000000188 >> ORACLE : Disconnect
+2015-10-15 07:24:53	 	
+2015-10-15 07:24:53	 	
+2015-10-15 07:24:53	 	CON\0000000196 >> ORACLE : Connect
+2015-10-15 07:24:53	 	CON\0000000196 >> ORACLE Text: SELECT EXS_ID, SRC_S_ID, DST_S_ID, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, APP_ID FROM AS_CUB_NACH_T.EX_SYSTEM WHERE DST_S_ID=70303AND SRC_S_ID=70260AND APP_ID=2
+2015-10-15 07:24:53	 	CON\0000000196 Returned: 1 row(s)
+2015-10-15 07:24:53	 	CON\0000000196 Total execution Time: 00:00:00.0156316
+2015-10-15 07:24:53	 	
+2015-10-15 07:24:53	 	CON\0000000196 >> ORACLE : Disconnect
+2015-10-15 07:24:53	 	
+2015-10-15 07:24:53	 	
+2015-10-15 07:24:53	 	CON\0000000197 >> ORACLE : Connect
+2015-10-15 07:24:53	 	CON\0000000197 >> ORACLE Text: SELECT EXF_ID, EXHF_ID, FILE_PATH, EXH_ID, EXFFG_ID, FILE_NAME, EXFF_ID, FILE_STATUS, COMPRESSION_FILE FROM AD_CUB_NACH_T.VW_EX_FILEINFO WHERE EXFFG_ID=526AND FILE_STATUS IN('UPDATEFAILED') AND EXHF_ID IN (32109)
+2015-10-15 07:24:53	 	CON\0000000197 Returned: 0 row(s)
+2015-10-15 07:24:53	 	CON\0000000197 Total execution Time: 00:00:00
+2015-10-15 07:24:53	 	
+2015-10-15 07:24:53	 	CON\0000000197 >> ORACLE : Disconnect
+2015-10-15 07:24:53	 	
+2015-10-15 07:24:53	 	
+2015-10-15 07:24:53	 	CON\0000000198 >> ORACLE : Connect
+2015-10-15 07:24:53	 	CON\0000000198 >> ORACLE Text: SELECT AS_ID, AS_NAME, AS_VALUE, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, APP_ID FROM AC_CUB_NACH_T.APPLICATION_SETUP WHERE AS_NAME='RECORDS_PER_PAGE' and APP_ID=2
+2015-10-15 07:24:53	 	CON\0000000198 Returned: 1 row(s)
+2015-10-15 07:24:53	 	CON\0000000198 Total execution Time: 00:00:00
+2015-10-15 07:24:53	 	
+2015-10-15 07:24:53	 	CON\0000000198 >> ORACLE : Disconnect
+2015-10-15 07:24:53	 	
+2015-10-15 07:24:53	 	
+2015-10-15 07:24:53	 	CON\0000000199 >> ORACLE : Connect
+2015-10-15 07:24:53	 	CON\0000000199 >> ORACLE StoredProcedure: AD_CUB_NACH_T.SP_RECORD_UNLOCK
+2015-10-15 07:24:53	 	CON\0000000199 pU_Id                           Int32            = 1
+2015-10-15 07:24:53	 	CON\0000000199 pSTS_Id                         Int32            = 1405
+2015-10-15 07:24:53	 	CON\0000000199 pPRCT_ID                        Int32            = 0
+2015-10-15 07:24:53	 	CON\0000000199 pLOCK_MODE                      Varchar2         = 
+2015-10-15 07:24:53	 	CON\0000000199 pLOCK_TYPE                      Varchar2         = NULL
+2015-10-15 07:24:53	 	CON\0000000199 pCurrentTime                    TimeStamp        = 10/15/2015 7:24:53 PM
+2015-10-15 07:24:53	 	CON\0000000199 Rows Affected: -1
+2015-10-15 07:24:53	 	CON\0000000199 Total execution Time: 00:00:00.0156316
+2015-10-15 07:24:53	 	
+2015-10-15 07:24:53	 	CON\0000000199 
+
+2015-10-15 07:24:53	 	CON\0000000199 >> ORACLE : Disconnect
+2015-10-15 07:24:53	 	
+2015-10-15 07:24:53	 	
