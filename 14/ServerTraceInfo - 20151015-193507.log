@@ -1,0 +1,1005 @@
+
+2015-10-15 07:46:09	 	CON\0000000538 >> ORACLE : Connect
+2015-10-15 07:46:09	 	CON\0000000538 >> ORACLE Text: SELECT EXS_ID, SRC_S_ID, DST_S_ID, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, APP_ID FROM AS_CUB_NACH_T.EX_SYSTEM WHERE DST_S_ID=70303AND SRC_S_ID=70260AND APP_ID=2
+2015-10-15 07:46:09	 	CON\0000000538 Returned: 1 row(s)
+2015-10-15 07:46:09	 	CON\0000000538 Total execution Time: 00:00:00
+2015-10-15 07:46:09	 	
+2015-10-15 07:46:09	 	CON\0000000538 >> ORACLE : Disconnect
+2015-10-15 07:46:09	 	
+2015-10-15 07:46:09	 	
+2015-10-15 07:46:09	 	CON\0000000539 >> ORACLE : Connect
+2015-10-15 07:46:09	 	CON\0000000539 >> ORACLE : BEGIN TRANSACTION
+2015-10-15 07:46:09	 	CON\0000000539 Total execution Time: 00:00:00
+2015-10-15 07:46:09	 	CON\0000000539 >> ORACLE (InTran)Text: SELECT EXFFG_ID, EXFFG_NAME, DATA_HANDLER_CODE, PROCESS_HANDLER_CODE, FORMATTER_HANDLER_CODE, DIRECTION, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, COMPRESSION_HANDLER_CODE, FILEUPDATE_HANDLER_CODE FROM AC_CUB_NACH_T.EX_FILE_FORMAT_GROUPS WHERE EXFFG_ID=526
+2015-10-15 07:46:09	 	CON\0000000539 Returned: 1 row(s)
+2015-10-15 07:46:09	 	CON\0000000539 Total execution Time: 00:00:00
+2015-10-15 07:46:09	 	
+2015-10-15 07:46:09	 	CON\0000000539 >> ORACLE (InTran)Text: SELECT AS_ID, AS_NAME, AS_VALUE, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, APP_ID FROM AC_CUB_NACH_T.APPLICATION_SETUP WHERE AS_NAME ='STORAGEPATH' and APP_ID=2
+2015-10-15 07:46:09	 	CON\0000000539 Returned: 1 row(s)
+2015-10-15 07:46:09	 	CON\0000000539 Total execution Time: 00:00:00
+2015-10-15 07:46:09	 	
+2015-10-15 07:46:09	 	CON\0000000539 >> ORACLE (InTran)Text: SELECT EXG_ID, GATEWAY_NAME, GATEWAY_CONFIG, GATEWAY_TYPE, READ_PATH, WRITE_PATH, IS_ELECTRONIC, HANDLER_CODE, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE FROM AC_CUB_NACH_T.EX_GATEWAYS WHERE EXG_ID=604
+2015-10-15 07:46:09	 	CON\0000000539 Returned: 1 row(s)
+2015-10-15 07:46:09	 	CON\0000000539 Total execution Time: 00:00:00
+2015-10-15 07:46:09	 	
+2015-10-15 07:46:09	 	CON\0000000539 >> ORACLE (InTran)Text: SELECT EXFF_ID, EXFFG_ID, FILE_NAME_PATTERN, EXTENSION, HANDLER_CODE, SORT_ORDER, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, MATCHING_PATTERN, DESCRIPTION FROM AC_CUB_NACH_T.EX_FILE_FORMATS WHERE EXFFG_ID=526
+2015-10-15 07:46:09	 	CON\0000000539 Returned: 1 row(s)
+2015-10-15 07:46:09	 	CON\0000000539 Total execution Time: 00:00:00
+2015-10-15 07:46:09	 	
+2015-10-15 07:46:09	 	CON\0000000539 >> ORACLE (InTran)Text: SELECT EXS_ID, SRC_S_ID, DST_S_ID, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, APP_ID FROM AS_CUB_NACH_T.EX_SYSTEM WHERE EXS_ID =241
+2015-10-15 07:46:09	 	CON\0000000539 Returned: 1 row(s)
+2015-10-15 07:46:09	 	CON\0000000539 Total execution Time: 00:00:00
+2015-10-15 07:46:09	 	
+2015-10-15 07:46:09	 	CON\0000000539 >> ORACLE (InTran)Text: INSERT INTO AD_CUB_NACH_T.EX_HEADER(EXS_ID, EXFFG_ID, FILE_PATH, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE) VALUES (:EXS_ID, :EXFFG_ID, :FILE_PATH, :CREATED_BY, :CREATED_DATE, :MODIFIED_BY, :MODIFIED_DATE, :VERSION_NO, :START_ACTIVE_DATE, :END_ACTIVE_DATE) RETURNING EXH_ID INTO :SEQPARAM 
+2015-10-15 07:46:09	 	CON\0000000539 :EXS_ID                         Decimal          = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :EXFFG_ID                       Decimal          = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :FILE_PATH                      Varchar2         = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :CREATED_BY                     Int32            = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :CREATED_DATE                   Date             = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :MODIFIED_BY                    Int32            = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :MODIFIED_DATE                  Date             = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :VERSION_NO                     Int32            = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :START_ACTIVE_DATE              Date             = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :END_ACTIVE_DATE                Date             = NULL
+2015-10-15 07:46:09	 	CON\0000000539 SEQPARAM                        Decimal          = NULL
+2015-10-15 07:46:09	 	CON\0000000539 Rows Affected: 1
+2015-10-15 07:46:09	 	CON\0000000539 Total execution Time: 00:00:00
+2015-10-15 07:46:09	 	
+2015-10-15 07:46:09	 	CON\0000000539 >> ORACLE (InTran)Text: INSERT INTO AD_CUB_NACH_T.EX_FILES(FILE_NAME, FILE_STATUS, EXFF_ID, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, REFERENCE_NO, COMPRESSION_FILE) VALUES (:FILE_NAME, :FILE_STATUS, :EXFF_ID, :CREATED_BY, :CREATED_DATE, :MODIFIED_BY, :MODIFIED_DATE, :VERSION_NO, :START_ACTIVE_DATE, :END_ACTIVE_DATE, :REFERENCE_NO, :COMPRESSION_FILE) RETURNING EXF_ID INTO :SEQPARAM 
+2015-10-15 07:46:09	 	CON\0000000539 :FILE_NAME                      Varchar2         = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :FILE_STATUS                    Varchar2         = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :EXFF_ID                        Decimal          = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :CREATED_BY                     Int32            = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :CREATED_DATE                   Date             = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :MODIFIED_BY                    Int32            = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :MODIFIED_DATE                  Date             = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :VERSION_NO                     Int32            = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :START_ACTIVE_DATE              Date             = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :END_ACTIVE_DATE                Date             = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :REFERENCE_NO                   Varchar2         = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :COMPRESSION_FILE               Varchar2         = NULL
+2015-10-15 07:46:09	 	CON\0000000539 SEQPARAM                        Decimal          = NULL
+2015-10-15 07:46:09	 	CON\0000000539 Rows Affected: 1
+2015-10-15 07:46:09	 	CON\0000000539 Total execution Time: 00:00:00
+2015-10-15 07:46:09	 	
+2015-10-15 07:46:09	 	CON\0000000539 >> ORACLE (InTran)Text: INSERT INTO AD_CUB_NACH_T.EX_HEADER_FILES(EXF_ID, EXH_ID, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE) VALUES (:EXF_ID, :EXH_ID, :CREATED_BY, :CREATED_DATE, :MODIFIED_BY, :MODIFIED_DATE, :VERSION_NO, :START_ACTIVE_DATE, :END_ACTIVE_DATE) RETURNING EXHF_ID INTO :SEQPARAM 
+2015-10-15 07:46:09	 	CON\0000000539 :EXF_ID                         Decimal          = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :EXH_ID                         Decimal          = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :CREATED_BY                     Int32            = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :CREATED_DATE                   Date             = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :MODIFIED_BY                    Int32            = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :MODIFIED_DATE                  Date             = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :VERSION_NO                     Int32            = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :START_ACTIVE_DATE              Date             = NULL
+2015-10-15 07:46:09	 	CON\0000000539 :END_ACTIVE_DATE                Date             = NULL
+2015-10-15 07:46:09	 	CON\0000000539 SEQPARAM                        Decimal          = NULL
+2015-10-15 07:46:09	 	CON\0000000539 Rows Affected: 1
+2015-10-15 07:46:09	 	CON\0000000539 Total execution Time: 00:00:00
+2015-10-15 07:46:09	 	
+2015-10-15 07:46:09	 	CON\0000000539 >> ORACLE : COMMIT TRANSACTION
+2015-10-15 07:46:09	 	CON\0000000539 Total execution Time: 00:00:00
+2015-10-15 07:46:09	 	CON\0000000539 >> ORACLE : Disconnect
+2015-10-15 07:46:09	 	
+2015-10-15 07:46:09	 	
+2015-10-15 07:46:09	 	CON\0000000540 >> ORACLE : Connect
+2015-10-15 07:46:09	 	CON\0000000540 >> ORACLE : BEGIN TRANSACTION
+2015-10-15 07:46:09	 	CON\0000000540 Total execution Time: 00:00:00
+2015-10-15 07:46:09	 	CON\0000000540 >> ORACLE (InTran)Text: SELECT EXF_ID, EXHF_ID, FILE_PATH, EXH_ID, EXFFG_ID, FILE_NAME, EXFF_ID, FILE_STATUS, COMPRESSION_FILE FROM AD_CUB_NACH_T.VW_EX_FILEINFO WHERE EXFFG_ID=526 And FILE_STATUS IN ('DOWNLOADED') AND EXHF_ID IN (32113)
+2015-10-15 07:46:10	 	CON\0000000540 Returned: 1 row(s)
+2015-10-15 07:46:10	 	CON\0000000540 Total execution Time: 00:00:00.0156300
+2015-10-15 07:46:10	 	
+2015-10-15 07:46:10	 	CON\0000000540 >> ORACLE (InTran)Text: SELECT EXFFG_ID, EXFFG_NAME, DATA_HANDLER_CODE, PROCESS_HANDLER_CODE, FORMATTER_HANDLER_CODE, DIRECTION, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, COMPRESSION_HANDLER_CODE, FILEUPDATE_HANDLER_CODE FROM AC_CUB_NACH_T.EX_FILE_FORMAT_GROUPS WHERE EXFFG_ID=526
+2015-10-15 07:46:10	 	CON\0000000540 Returned: 1 row(s)
+2015-10-15 07:46:10	 	CON\0000000540 Total execution Time: 00:00:00
+2015-10-15 07:46:10	 	
+2015-10-15 07:46:10	 	CON\0000000540 >> ORACLE (InTran)Text: SELECT EXS_ID, SRC_S_ID, DST_S_ID, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, APP_ID FROM AS_CUB_NACH_T.EX_SYSTEM WHERE EXS_ID =241
+2015-10-15 07:46:10	 	CON\0000000540 Returned: 1 row(s)
+2015-10-15 07:46:10	 	CON\0000000540 Total execution Time: 00:00:00
+2015-10-15 07:46:10	 	
+2015-10-15 07:46:10	 	CON\0000000540 >> ORACLE (InTran)Text: SELECT EXRF_ID, ELEMENT_NAME, EXFF_ID, RFTYPE, EXFFG_ID, PARENT_EXRF_ID, EXFFD_ID, EXFFD_TYPE, VALUE_FIELD, DISP_FIELD, GROUP_BY, MAXCOUNT, HANDLERCODE, FORMAT, ATTRIBUTES, SEPARATOR, PREFIX_VALUE, AGGREGATE_COLUMN, SUFFIX_VALUE, IGNORE_FIELD, SORT_ORDER, FFD_PARENT_COL, START_FROM, LENGTH, FFD_CHILD_COL, FFD_TABLE_NAME, PARENT_COL, CHILD_COL, TABLE_NAME FROM AC_CUB_NACH_T.VW_EX_FIELDS WHERE EXFFG_ID=526
+2015-10-15 07:46:10	 	CON\0000000540 Returned: 0 row(s)
+2015-10-15 07:46:10	 	CON\0000000540 Total execution Time: 00:00:00.0156300
+2015-10-15 07:46:10	 	
+2015-10-15 07:46:10	 	CON\0000000540 >> ORACLE (InTran)StoredProcedure: AS_CUB_NACH_T.SP_SCH_GET_SCHEMA_NAME
+2015-10-15 07:46:10	 	CON\0000000540 pTableName                      Varchar2         = EX_SYSTEM_GATEWAYS
+2015-10-15 07:46:10	 	CON\0000000540 pAppId                          Int32            = 2
+2015-10-15 07:46:10	 	CON\0000000540 pSchemaName                     Varchar2         = NULL
+2015-10-15 07:46:10	 	CON\0000000540 Rows Affected: -1
+2015-10-15 07:46:10	 	CON\0000000540 Total execution Time: 00:00:00
+2015-10-15 07:46:10	 	
+2015-10-15 07:46:10	 	CON\0000000540 
+
+2015-10-15 07:46:10	 	CON\0000000540 >> ORACLE (InTran)Text: SELECT EXSG_ID, EXS_ID, EXG_ID, EXFFG_ID, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, DESCRIPTION, FILE_SECURITY, CONTENT_SECURITY, SENDER_KEY, RECEIVER_KEY, COMPRESSION, NEED_MQ, NEED_MAIL FROM AS_CUB_NACH_T.EX_SYSTEM_GATEWAYS WHERE EXS_ID =241 AND EXG_ID=604
+2015-10-15 07:46:10	 	CON\0000000540 Returned: 1 row(s)
+2015-10-15 07:46:10	 	CON\0000000540 Total execution Time: 00:00:00.0156300
+2015-10-15 07:46:10	 	
+2015-10-15 07:46:10	 	CON\0000000540 >> ORACLE (InTran)Text: SELECT EXFF_ID, EXFFG_ID, FILE_NAME_PATTERN, EXTENSION, HANDLER_CODE, SORT_ORDER, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, START_ACTIVE_DATE, END_ACTIVE_DATE, MATCHING_PATTERN, DESCRIPTION FROM AC_CUB_NACH_T.EX_FILE_FORMATS WHERE EXFFG_ID=526
+2015-10-15 07:46:10	 	CON\0000000540 Returned: 1 row(s)
+2015-10-15 07:46:10	 	CON\0000000540 Total execution Time: 00:00:00
+2015-10-15 07:46:10	 	
+2015-10-15 07:46:10	 	CON\0000000540 >> ORACLE (InTran)Text: SELECT AS_ID, AS_NAME, AS_VALUE, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO, APP_ID FROM AC_CUB_NACH_T.APPLICATION_SETUP WHERE AS_NAME IN ('GDPIC_LIC_KEY','NEED_ATTACHMENT_ENCRYPTION')
+2015-10-15 07:46:10	 	CON\0000000540 Returned: 2 row(s)
+2015-10-15 07:46:10	 	CON\0000000540 Total execution Time: 00:00:00
+2015-10-15 07:46:10	 	
+2015-10-15 07:46:10	 	CON\0000000540 >> ORACLE (InTran)Text: SELECT DTTADIF_ID, DTTAD_ID, IMAGE_COLOR, IMAGE_FORMAT, RESOULTION, COMPRESSION, IS_DEFAULT, CREATED_BY, CREATED_DATE, MODIFIED_BY, MODIFIED_DATE, VERSION_NO FROM AC_CUB_NACH_T.DTTAD_IMAGE_FORMATS WHERE IS_DEFAULT='Y'
+2015-10-15 07:46:10	 	CON\0000000540 Returned: 1 row(s)
+2015-10-15 07:46:10	 	CON\0000000540 Total execution Time: 00:00:00
+2015-10-15 07:46:10	 	
+2015-10-15 07:46:10	 	CON\0000000540 >> ORACLE (InTran)Text: SELECT RS_ID, RS_CODE, RS_DESCRIPTION, TRANSFER_MODE, HOST_NAME, PORT_NO, STORAGE_PATH, STATUS, RS_STORAGE_TYPE, S_ID, RS_DB_INFO FROM AS_CUB_NACH_T.VW_GET_RESOURCE_SERVERS WHERE S_ID ='70260'
+2015-10-15 07:46:10	 	CON\0000000540 Returned: 1 row(s)
+2015-10-15 07:46:10	 	CON\0000000540 Total execution Time: 00:00:00
+2015-10-15 07:46:10	 	
+2015-10-15 07:46:10	 	Preparing Import Data Started..
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147853376> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147853377> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147853378> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147853379> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147853389> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147853391> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147853392> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147853393> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147853394> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147853395> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147853396> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147853397> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147853398> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147853399> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147853400> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147853401> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147853987> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147854913> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147855067> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147855068> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147856409> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147856410> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147856883> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147856884> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147856891> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147856892> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147862331> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147862333> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147862334> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147862335> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147862339> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147862341> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147862346> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147862348> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147862356> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147862358> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147862706> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863033> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863169> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863170> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863171> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863172> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863173> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863174> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863175> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863176> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863177> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863178> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863179> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863180> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863181> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863182> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863541> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863542> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863543> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863544> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147863928> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147870972> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147871512> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147871552> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147871554> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147873214> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147876256> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147876257> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147876258> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147876259> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147876260> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147876261> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147876262> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147876263> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147876265> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147876268> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147876269> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147876270> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147876273> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147876275> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147876276> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147877417> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147879385> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147879386> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147879387> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147879388> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147879389> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147879723> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147879724> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147879725> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147879726> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147879728> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147879732> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147879738> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147886065> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147886070> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147886077> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147886078> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147886080> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147886082> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147886083> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147888103> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147888104> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147888105> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147888106> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147888109> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147888110> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147888111> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147889260> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147889425> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147889608> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147891724> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <2147892317> in ACH_ITEM_SEQ_NO Column.  Expected type is Int32. ---> System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Convert.ToInt32(Int64 value)
+   at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- End of inner exception stack trace ---
+   at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataRow.set_Item(DataColumn column, Object value)
+   at Gss.Oasis.App.NACH.Banking.NPCIFx.APBS_CR_IP_TXT_File.Load() in D:\OASIS 5.0\Development\Windows\APP\Gss.Oasis.App.NACH\Gss.Oasis.App.NACH.Banking.NPCIFx\DBT_CREDIT\APBS_CR_IP_TXT_File.vb:line 132
+2015-10-15 07:46:10	 	System.ArgumentException: Value was either too large or too small for an Int32.Couldn't store <214
